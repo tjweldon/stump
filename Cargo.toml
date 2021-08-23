@@ -8,3 +8,5 @@ edition = "2018"
 [dependencies]
 shellexpand = "2.1.0"
 walkdir = "2.3.2"
+ansi_term = "0.12.1"
+clap = "2.33.3"
