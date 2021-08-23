@@ -23,8 +23,9 @@ A lightweight, vaporwave themed replacement for the unix tree command.
  - The `-d` option allows you to control how deepo into the directory tree you want to enumerate. A value of `-d 0` will just list your supplied root dir
  - If no dir argument is supplied, the default is your current working directory.
  - The `-h` option does what you'd expect:
- ```
- myapp 0.1
+
+```
+myapp 0.1
 github.com/tjweldon
 A nicer looking version of unix tree
 
@@ -41,10 +42,9 @@ OPTIONS:
 
 ARGS:
     <workingdir>    Specifies the root folder to produce a tree from, defaults
-    ```
+```
     
     
 Comments/Feedback are very welcome! This is my second project in rust, having come from PHP/python so I have no idea what I'm doing!
 
 Enjoy!
- 
