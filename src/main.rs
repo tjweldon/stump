@@ -43,10 +43,6 @@ fn main() {
 
     let walkdir = apply_recursion_depth(recursion_depth, walkdir);
 
-    // let walkdir = match show_all {
-    //     true => walkdir.into_iter(),
-    //     false => hide_hidden(walkdir).into_iter()
-    // };
 
     print_root_dir(Path::new(&absolute_path));
     for (_i, entry) in walkdir.into_iter().enumerate() {
@@ -58,7 +54,6 @@ fn main() {
         };
     }
 }
-
 
 fn apply_recursion_depth(recursion_depth: i32, full_depth: WalkDir) -> Vec<DirEntry> {
     let ok_paths = match recursion_depth >= 0 {
@@ -143,7 +138,10 @@ fn print_path(rel_path: &Path, show_all: bool) -> () {
         true => String::from_iter([BRANCH_SPLIT]),
         false => String::from_iter([BRANCH_CONTINUATION])
     };
-    let full_prefix_vec = [Vec::from_iter(painted), Vec::from_iter([get_colour_from_palette(depth).bold().paint(&last_delims)])].concat();
+    let full_prefix_vec = [
+        Vec::from_iter(painted),
+        Vec::from_iter([get_colour_from_palette(depth).bold().paint(&last_delims)])
+    ].concat();
     let full_prefix = ANSIGenericStrings(&full_prefix_vec);
 
     let icon = match is_dir {
