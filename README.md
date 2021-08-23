@@ -3,7 +3,16 @@ A lightweight, vaporwave themed replacement for the unix tree command.
 
 ## Installation
 
-### 1. Build from source:
+### 1. Install a Nerd Font in your Terminal
+ - The [nerd font site](https://www.nerdfonts.com/) has a great selection of Nerd Patched monospace fonts. You should use them!
+ - This was built and tested with JetBrainsMono Nerd Font ([download link](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip)). No guarantees it works with comic sans but let me know if you try it.
+ - Use a terminal emulator that has good utf-8 support! If you want to test yours run the following command and check for broken glyphs:
+```
+curl https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt | less
+```
+ - I can recommend kitty (unix based), alacritty (you can build from source), hyper.js (cross-platform), iterm2 (osx).
+
+### 2. Build from source:
  - Install the rust toolchain [here](https://www.rust-lang.org/tools/install) 
  - Clone the repo
  ```
