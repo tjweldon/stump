@@ -28,7 +28,9 @@ curl https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt | less
 ## Usage
  - The default behavior of stump is to recursively list the files and directories in a folder you supply.
  - The screenshot below is (a truncated) view of  its output when run with no args in the project root directory:
-    [image to come]
+
+![stump in action](https://raw.githubusercontent.com/tjweldon/stump/main/doc/img.png)
+
  - The `-d` option allows you to control how deepo into the directory tree you want to enumerate. A value of `-d 0` will just list your supplied root dir
  - If no dir argument is supplied, the default is your current working directory.
  - The `-h` option does what you'd expect:
