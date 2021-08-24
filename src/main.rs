@@ -122,7 +122,7 @@ fn print_path(rel_path: &Path, show_all: bool) -> () {
         .enumerate()
         .map(
             |(i, delim)| {
-                get_colour_from_palette(i).bold().paint(format!("{}", delim))
+                get_colour_from_palette(i).paint(format!("{}", delim))
             }
         );
     // let prefix = String::from_iter(prefix_vec.into_iter());
@@ -140,7 +140,7 @@ fn print_path(rel_path: &Path, show_all: bool) -> () {
     };
     let full_prefix_vec = [
         Vec::from_iter(painted),
-        Vec::from_iter([get_colour_from_palette(depth).bold().paint(&last_delims)])
+        Vec::from_iter([get_colour_from_palette(depth).paint(&last_delims)])
     ].concat();
     let full_prefix = ANSIGenericStrings(&full_prefix_vec);
 
